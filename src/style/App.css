@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.App-main {
+  margin: 70px 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  font-size: calc(10px + 2vmin);
+  color: darkblue;
+}
+
+.load-btn {
+  border: 0;
+  line-height: 2.5;
+  padding: 0px 40px;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(240, 128, 128)
+}
+
+.load-btn:hover {
+  background-color: rgb(225, 118, 118)
+}
+
+.load-btn:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.App-link {
+  color: rgb(203, 100, 100);
+}
+
+.hide {
+  display: none;
+}
+

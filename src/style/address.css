@@ -1,0 +1,13 @@
+/* this css class styles the  Address.jsx and the AddressList.jsx files */
+
+.addressbox{
+    border: solid 1px rgb(240, 128, 128);
+    margin: 10px 0;
+    padding: 15px;
+    text-align: left;
+    font-size: medium;
+}
+
+.associated{
+    border: solid 5px rgb(62, 108, 232);
+}

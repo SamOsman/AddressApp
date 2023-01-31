@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+
+//style
+import './style/App.css';
+
+//components
+import AddressList from './components/addressList'
+
+//data 
+import addressList from './addressList.json'
 
 function App() {
+ 
+  const [addresses, setAddresses] = useState(null)
+  const loadAddressList = () => {
+    setAddresses(addressList)
+    document.getElementById("removeElement").classList.add('hide')
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main className='App-main '>
+          <button className='load-btn' onClick={loadAddressList}>
+            Load Addresses
+          </button>
+          <section>
+            <p id='removeElement'>List of addresses will appear here</p>
+            <AddressList addressList={addresses}/>
+          </section>
+      </main>
     </div>
   );
 }
